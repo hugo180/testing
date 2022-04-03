@@ -1,0 +1,228 @@
+
+.body {
+    background-color: #000;
+	 font-family: 'Raleway', sans-serif;
+	 background-image: radial-gradient(circle at center, #899dc4, #495d84);
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 height: 100vh;
+	 overflow: hidden;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+	 font-weight: 300;
+}
+ .all {
+	 display: flex;
+	 perspective: 10px;
+	 transform: perspective(300px) rotateX(20deg);
+	 will-change: perspective;
+	 perspective-origin: center center;
+	 transition: all 1.3s ease-out;
+	 justify-content: center;
+	 transform-style: preserve-3d;
+}
+ .all:hover {
+	 perspective: 1000px;
+	 transition: all 1.3s ease-in;
+	 transform: perspective(10000px) rotateX(0deg);
+}
+ .all:hover .text {
+	 opacity: 1;
+}
+ .all:hover > div {
+	 opacity: 1;
+	 transition-delay: 0s;
+}
+ .all:hover .pets {
+	 opacity: 0;
+}
+ .dog, .hamster, .cat, .rept, .righter {
+	 width: 200px;
+	 height: 150px;
+	 transform-style: preserve-3d;
+	 border-radius: 10px;
+	 border: 1px solid #fff;
+	 box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+	 opacity: 0;
+	 transition: all 0.3s ease;
+	 transition-delay: 1s;
+	 position: relative;
+	 background-position: center center;
+	 background-size: contain;
+	 background-repeat: no-repeat;
+	 background-color: rgb(255, 255, 255);
+	 cursor: pointer;
+}
+ .dog:hover, .hamster:hover, .cat:hover, .rept:hover, .righter:hover {
+	 box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+	 background-color: #ccf;
+}
+ .text {
+	 transform: translateY(30px);
+	 opacity: 0;
+	 transition: all 0.3s ease;
+	 bottom: 0;
+	 left: 5px;
+	 position: absolute;
+	 color: #fff;
+	 text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+}
+ .rept {
+	 transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+	 background-image:url(./images/collars.png);
+}
+ .dog {
+	 transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+	 background-image: url(./images/food.avif);
+}
+ .hamster {
+	 opacity: 1;
+	 background-image: url(./images/toys.webp);
+     background-color: #000;
+     text-align: center;
+}
+ .cat {
+	 transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+	 background-image: url(./images/treats.jpeg);
+}
+ .righter {
+	 transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+	 background-image: url(./images/VANITY.webp);
+}
+ .pets {
+	 font-weight: 300;
+	 font-size: 2rem;
+	 color: #fff;
+	 transition: all 0.6s ease;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #303050;
+	 background-image: url(./images/pets.jpeg);
+	 border-radius: 10px;
+	 text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .all{
+		align-items: center;
+		display:flex ;
+		flex-direction: column;
+		perspective: 10px;
+		transform:none;
+		will-change: none;
+		perspective-origin: center;
+		transition:none;
+		justify-content: space-evenly;
+		transform-style: none;
+		width: 100%;
+		height: 100%;
+		text-align: auto;
+	}
+	.all:hover {
+		transition: all 1s ease-in;
+		transform: scale(1.1);
+		text-align: auto;
+   }
+	.text{
+		color: #000;
+		transition: all 1s ease-in;
+		transform:scale(1.1);
+		text-align: auto;	
+		display:flex;
+		flex-direction: column;
+		font-weight: 500;
+		font-size: auto;
+	}
+	.pets {
+		display:flex;
+		flex-direction: column;
+		font-weight: 300;
+		font-size: 2rem;
+		color: #fff;
+		transition:none;
+		width: 100%;
+		height: 100%;
+		background-image: none;
+		background-color: #09695e;
+		border-radius: 10px;
+		display: grid;
+		align-items: center;
+		text-align: center;
+   }
+
+   
+ .rept  {
+	align-items: center;
+	bottom: 10px;
+	background-image: none;
+	background-color: aqua;
+	border-bottom: none;
+	 
+}
+
+.rept:hover{
+
+		transition: all 1s ease-in;
+		transform:scale(1.1);
+
+}
+.dog {
+	
+	align-items: center;
+	bottom: 10px;
+	background-image: none;
+	background-color: aqua;
+	border-bottom: none;
+}
+
+.dog:hover{
+	transition: all 1s ease-in;
+	transform:scale(1.2);
+}
+.hamster {
+
+	align-items: center;
+	bottom: 10px;
+	background-image: none;
+	background-color: aqua;
+	border-bottom: none;
+}
+ .hamster:hover{
+	transition: all 1s ease-in-out;
+	transform:scale(1.1);
+ }
+.cat {
+
+	align-items: center;
+	bottom: 10px;
+	background-image: none;
+	background-color: aqua;
+	border-bottom: none;
+}
+.cat:hover{
+	transition: all 1s ease-in;
+	transform:scale(1.1);
+}
+.righter {
+
+	align-items: center;
+	bottom: 10px;
+	background-image: none;
+	background-color: aqua;
+	border-bottom: none;
+}
+  
+  .righter:hover{
+	transition: all 1s ease-in;
+	transform:scale(1.1);
+  }
+}
+
